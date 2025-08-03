@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .centered-text {
+            text-align: center;
+            margin-bottom: 1px; /* Add some space between rows */
+        }
+        .button-list {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            /* gap: 10px;*/
+            margin-top: 0px;
+        }
+        .button-list a {
+            text-decoration: none;
+        }
+        .collapsible {
+            background-color: #777;
+            color: #fff;
+            padding: 15px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .collapsible:hover {
+            background-color: #48a48f;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            /*border: 1px solid #ccc; */
+            width: 150%;
+            text-align: center;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .responsive-button {
+            background-color: #777;
+            color: #fff;
+            padding: 15px 0; /* Set padding for top and bottom */
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .responsive-button:hover {
+            background-color: #48a48f;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .responsive-button {
+                padding: 12px 0;
+                font-size: 14px;
+            }
+            .collapsible {
+                padding: 12px 0;
+                font-size: 14px;
+            }
+            .content {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .responsive-button {
+                padding: 10px 0;
+                font-size: 12px;
+            }
+            .collapsible {
+                padding: 10px 0;
+                font-size: 12px;
+            }
+            .content {
+                font-size: 12px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="centered-text">
+        <p><large>👩🏻‍💻 🦉</large></p>
+    </div>
+    <div class="container">
+        <!-- Collapsible section -->
+        <button class="collapsible">about</button>
+         <div class="content">
+            <p><strong>- full or some consistency -</strong></p>
+            <p>🐤 bird mom 🪶 birdtrovert homebody</p>
+            <p>📷 photography 🎧 music</p>
+            <p>🖼️ art, design, aesthetics (exploring, admiring, tumblring)</p>
+            <p>🏊 swimming 🧘 yoga 🎫 concerts & festivals</p>
+            <p><strong>- enjoying at home -</strong></p>
+            <p>🥬 cooking healthy vegetarian meals</p>
+            <p>🪴 interior decoration 🖥️ workspace setups</p>
+            <p>🕹️ oldschool gaming (90's, 00's) 🪛 pc building</p>
+         </div>
+    </div>
+    <ul class="button-list">
+        <li><a href="https://bsky.app/profile/dpkgme.tech" target="_blank"><button class="responsive-button">bluesky</button></a></li>
+        <li><a href="https://dpkgme.tumblr.com" target="_blank"><button class="responsive-button">tumblr</button></a></li>
+        <li><a href="http://www.savebirds.gr" target="_blank"><button class="responsive-button">savebirds.gr</button></a></li>
+        <li><a href="https://psky.co/dpkgme.tech" target="_blank"><button class="responsive-button">pinksky</button></a></li>
+        <li><a href="https://github.com/dpkgme" target="_blank"><button class="responsive-button">github</button></a></li>
+    </ul>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var collapsible = document.querySelector(".collapsible");
+            var content = document.querySelector(".content");
+
+            collapsible.addEventListener("click", function () {
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>
